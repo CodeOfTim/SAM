@@ -28,5 +28,6 @@ jobs:
         
       - name: Test
         run: |
+          echo ${{ env.GITHUB_REF }}
           echo $RELEASE_VERSION
           echo ${{ env.RELEASE_VERSION }}
