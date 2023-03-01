@@ -22,10 +22,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
         
       - name: Test
         run: |
-          git fetch --all --tags
+          
           git describe
           echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}"
           echo ${{ env.GITHUB_REF }}
