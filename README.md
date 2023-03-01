@@ -1,3 +1,3 @@
 # SAM
 
-this is a test release v4.5.0
+this is a test release v6.5.0
